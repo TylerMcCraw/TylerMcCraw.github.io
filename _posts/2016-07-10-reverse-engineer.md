@@ -31,9 +31,9 @@ Latest Apktool installation instructions can be found [here](http://ibotpeaches.
 4. Move both files (apktool.jar & apktool) to /usr/local/bin (root needed)
 5. Make sure both files are executable via cli: `chmod +x apktool` and `chmod +x apktool.jar`
 6. Via cli, run: 
-{% highlight bash %}
+```
 apktool d ~/Desktop/dummy_app.apk -o ~/Desktop/dummy_app
-{% endhighlight %}
+```
 
 You'll notice that you now have a folder containing the Android resources. But, at least the Android resources are readable!
 Take a look at the before and after Android Manifest files in my gist here: https://gist.github.com/TylerMcCraw/fc62a13a6ec4a9877858db853d274f6d
@@ -41,16 +41,16 @@ Take a look at the before and after Android Manifest files in my gist here: http
 ## Step 2: Extract the compiled Java code using dex2jar
 
 1. Unzip the APK file via cli: 
-{% highlight bash %}
+```
 unzip ~/Desktop/dummy_app.apk -d ~/Desktop/dummy_app
-{% endhighlight %}
+```
 2. Download the dex2jar tool and unzip it.
 3. Recursively set executable permissions to files within the new dex2jar folder via cli: `chmod -R +x ~/Desktop/dex2jar-2.0/`
 4. Change your current directory to the same directory that was created via the Apktool so that the dex2jar script outputs the decompiled .jar file in a place that you can easily find later: `cd ~/Desktop/dummy_app`
 5. Execute the d2j-jar2dex shell script against your APK via cli:
-{% highlight bash %}
+```
 ~/Desktop/dex2jar-2.0/d2j-dex2jar.sh ~/Desktop/dummy_app.apk
-{% endhighlight %}
+```
 
 You'll notice that you now have a file titled something like "dummy_app-dex2jar.jar" in your current directory. This file was converted from the APK's classes.dex (Dalvik Executable) file. This jar contains the APK's java code! All we need now is a tool to decompile the jar.
 
