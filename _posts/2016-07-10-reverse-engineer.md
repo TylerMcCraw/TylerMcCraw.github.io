@@ -36,7 +36,7 @@ apktool d ~/Desktop/dummy_app.apk -o ~/Desktop/dummy_app
 ```
 
 You'll notice that you now have a folder containing the Android resources. But, at least the Android resources are readable!
-Take a look at the before and after Android Manifest files in my gist here: https://gist.github.com/TylerMcCraw/fc62a13a6ec4a9877858db853d274f6d
+Take a look at the before and after Android Manifest files in my gist [here](https://gist.github.com/TylerMcCraw/fc62a13a6ec4a9877858db853d274f6d)
 
 ## Step 2: Extract the compiled Java code using dex2jar
 
@@ -55,7 +55,7 @@ unzip ~/Desktop/dummy_app.apk -d ~/Desktop/dummy_app
 You'll notice that you now have a file titled something like "dummy_app-dex2jar.jar" in your current directory. This file was converted from the APK's classes.dex (Dalvik Executable) file. This jar contains the APK's java code! All we need now is a tool to decompile the jar.
 
 ## Step 3: Decompile the Jar using JD-GUI
-Latest installation instructions on this tool can be found [here](http://jd.benow.ca/)
+Latest installation instructions on this tool can be found [here](http://jd.benow.ca/).
 Alternatively, you can use any java decompiler tool that you prefer. This step isn't necessarily specific to Android decompilation.
 
 1. Extract the JD-GUI tool from the download
@@ -64,6 +64,6 @@ Alternatively, you can use any java decompiler tool that you prefer. This step i
 
 JD-GUI should now show folders containing the Java class files. These aren't going to be exactly as they are in the developer's Android project because they are the decompiled short-form classes, as I mentioned earlier.
 If you'd like to save the decompiled class files, just click on File -> Save All Sources.
-Take a look at the before and after Java class files in my gist here: https://gist.github.com/TylerMcCraw/fc62a13a6ec4a9877858db853d274f6d
+Take a look at the before and after Java class files in my gist [here](https://gist.github.com/TylerMcCraw/fc62a13a6ec4a9877858db853d274f6d)
 
 That's it! Now that you have the source code and the Android resource files, you can use it to help you get a glimpse of how the application is architected and to decipher how the application works.
