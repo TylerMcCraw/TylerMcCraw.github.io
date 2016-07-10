@@ -15,6 +15,7 @@ Also, it's worth mentioning that Google has built a single tool called [Classy S
 But, without further ado, here are the steps _I followed_ to decompile an APK on my own.
 
 Make sure to download these files and install them before following the steps below.
+
 1. [Apktool](http://ibotpeaches.github.io/Apktool)
 2. [dex2jar](https://github.com/pxb1988/dex2jar)
 3. [JD-GUI](http://jd.benow.ca/)
@@ -22,7 +23,8 @@ Make sure to download these files and install them before following the steps be
 For the purposes of demoing how to decompile an APK, I've built a dummy APK out of an Android Studio project template that contains a single Activity and a single Fragment (along with layout resources for each). My project, like any other Android project contains the Android Manifest file and Gradle scripts. I'm also going to assume you're using a Mac, but note that the three aforementioned tools have installation instructions for other platforms on their respective websites.
 
 ## Step 1: Extract the Android Resources using Apktool
-Latest Apktool installation instructions can be found here: http://ibotpeaches.github.io/Apktool/install/
+Latest Apktool installation instructions can be found [here](http://ibotpeaches.github.io/Apktool/install/)
+
 1. Download the Apktool mac [wrapper script](https://raw.githubusercontent.com/iBotPeaches/Apktool/master/scripts/osx/apktool) (Right click, Save Link As apktool) Or rename after downloading file via cli: `mv apktool.txt apktool`
 2. Download [apktool-2](https://bitbucket.org/iBotPeaches/apktool/downloads)
 3. Rename downloaded jar to apktool.jar
@@ -32,15 +34,16 @@ Latest Apktool installation instructions can be found here: http://ibotpeaches.g
 {% highlight bash %}
 apktool d ~/Desktop/dummy_app.apk -o ~/Desktop/dummy_app
 {% endhighlight %}
+
 You'll notice that you now have a folder containing the Android resources. But, at least the Android resources are readable!
-Take a look at the before and after Android Manifest files here: https://gist.github.com/TylerMcCraw/fc62a13a6ec4a9877858db853d274f6d
+Take a look at the before and after Android Manifest files in my gist here: https://gist.github.com/TylerMcCraw/fc62a13a6ec4a9877858db853d274f6d
 
 ## Step 2: Extract the compiled Java code using dex2jar
+
 1. Unzip the APK file via cli: 
 {% highlight bash %}
-`unzip ~/Desktop/dummy_app.apk -d ~/Desktop/dummy_app`
+unzip ~/Desktop/dummy_app.apk -d ~/Desktop/dummy_app
 {% endhighlight %}
-Alternatively, you can just rename the .apk file to .zip and unzip it by right-clicking the file.
 2. Download the dex2jar tool and unzip it.
 3. Recursively set executable permissions to files within the new dex2jar folder via cli: `chmod -R +x ~/Desktop/dex2jar-2.0/`
 4. Change your current directory to the same directory that was created via the Apktool so that the dex2jar script outputs the decompiled .jar file in a place that you can easily find later: `cd ~/Desktop/dummy_app`
@@ -48,16 +51,19 @@ Alternatively, you can just rename the .apk file to .zip and unzip it by right-c
 {% highlight bash %}
 ~/Desktop/dex2jar-2.0/d2j-dex2jar.sh ~/Desktop/dummy_app.apk
 {% endhighlight %}
+
 You'll notice that you now have a file titled something like "dummy_app-dex2jar.jar" in your current directory. This file was converted from the APK's classes.dex (Dalvik Executable) file. This jar contains the APK's java code! All we need now is a tool to decompile the jar.
 
 ## Step 3: Decompile the Jar using JD-GUI
-Latest installation instructions on this tool can be found here: http://jd.benow.ca/
+Latest installation instructions on this tool can be found [here](http://jd.benow.ca/)
 Alternatively, you can use any java decompiler tool that you prefer. This step isn't necessarily specific to Android decompilation.
+
 1. Extract the JD-GUI tool from the download
 2. Double click on the tool (.jar file for Mac) to open it.
 3. Using the tool, click on "Open a file" and select the jar file that was extracted using dex2jar in Step 2 above.
+
 JD-GUI should now show folders containing the Java class files. These aren't going to be exactly as they are in the developer's Android project because they are the decompiled short-form classes, as I mentioned earlier.
 If you'd like to save the decompiled class files, just click on File -> Save All Sources.
-Take a look at the before and after Java class files here: https://gist.github.com/TylerMcCraw/fc62a13a6ec4a9877858db853d274f6d
+Take a look at the before and after Java class files in my gist here: https://gist.github.com/TylerMcCraw/fc62a13a6ec4a9877858db853d274f6d
 
 That's it! Now that you have the source code and the Android resource files, you can use it to help you get a glimpse of how the application is architected and to decipher how the application works.
