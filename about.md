@@ -3,6 +3,8 @@ layout: page
 title: About
 ---
 
+<!-- <img class="profile-img" src="https://pbs.twimg.com/profile_images/702861934941462528/enYaw9aM.jpg">
+<br /> -->
 Tyler is an Android Developer currently living in Durham, NC.  
    He is a: <i class="material-icons md-18">&#xE52F;</i> mountain biker, <i class="material-icons md-18">&#xE405;</i> banjo picker, and a <i class="material-icons md-18">&#xE544;</i> coffee enthusiast.
 

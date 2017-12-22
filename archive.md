@@ -3,6 +3,12 @@ layout: page
 title: Archive
 ---
 
-{% for post in site.posts %}
-  {{ post.date | date_to_string }} &emsp; [ {{ post.title }} ]({{ post.url }})
+{% assign postsByYearMonth = site.posts | group_by_exp:"post", "post.date | date: '%b %Y'"  %}
+{% for yearMonth in postsByYearMonth %}
+  <h3>{{ yearMonth.name }}</h3>
+  <ul>
+    {% for post in yearMonth.items %}
+      <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+    {% endfor %}
+  </ul>
 {% endfor %}
