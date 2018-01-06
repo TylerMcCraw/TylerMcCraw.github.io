@@ -1,9 +1,10 @@
 # Dependencies
 highlighter:      rouge
-gems: [jekyll-paginate, jekyll-gist, jekyll-github-metadata, jekyll-sitemap, jekyll-seo-tag, jemoji]
+gems: [jekyll-paginate, jekyll-gist, jekyll-github-metadata, jekyll-sitemap, jekyll-seo-tag, jemoji, jekyll-octicons]
 plugins:
   - jekyll-seo-tag
   - jemoji
+  - jekyll-octicons
 
 # Permalinks
 permalink:        pretty

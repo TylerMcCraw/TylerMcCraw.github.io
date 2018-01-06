@@ -12,5 +12,5 @@ You can find him on [GitHub](https://github.com/TylerMcCraw), Twitter [@w3bshark
 
 ------
 
-This site was made with [Jekyll](http://jekyllrb.com), [Hyde](http://hyde.getpoole.com), [Poole](http://getpoole.com), and [Sass](http://sass-lang.com/). 
-It was written using a font family called [Roboto](https://www.google.com/fonts/specimen/Roboto) by [Christian Robinson](https://twitter.com/cr64) and the [Material Design Icons](http://google.github.io/material-design-icons/).
+This site was made with [Jekyll](http://jekyllrb.com), [Hyde](http://hyde.getpoole.com), [Poole](http://getpoole.com), and [Sass](http://sass-lang.com/).
+It was written using a font family called [Roboto](https://www.google.com/fonts/specimen/Roboto) by [Christian Robinson](https://twitter.com/cr64), the [Material Design Icons](http://google.github.io/material-design-icons/), and [GitHub's Octicons](https://octicons.github.com/).
