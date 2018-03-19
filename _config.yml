@@ -1,7 +1,10 @@
 # Dependencies
 highlighter:      rouge
-gems: [jekyll-paginate, jekyll-gist, jekyll-github-metadata, jekyll-sitemap, jekyll-seo-tag, jemoji, jekyll-octicons]
 plugins:
+  - jekyll-paginate
+  - jekyll-gist
+  - jekyll-github-metadata
+  - jekyll-sitemap
   - jekyll-seo-tag
   - jemoji
   - jekyll-octicons
@@ -14,7 +17,7 @@ title:            Tyler McCraw
 tagline:          'An Android blog'
 description:      'A blog on Android development and other trains of thoughts.<br>Made by <a href="https://twitter.com/w3bshark" target="_blank">@w3bshark</a>.'
 url:              http://w3bshark.com
-baseurl:          http://w3bshark.com/
+baseurl:          ""
 
 author:
   name:           'Tyler McCraw'
