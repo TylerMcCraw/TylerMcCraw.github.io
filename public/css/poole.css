@@ -485,17 +485,53 @@ a.pagination-item:hover {
 }
 
 #portfolio-list {
-  /*columns: 2; WORK ON THIS
-  -moz-columns: 2;
-  -webkit-columns: 2;*/
+  -webkit-columns: 300px;
+     -moz-columns: 300px;
+          columns: 300px;
+  -webkit-column-gap: 2em;
+     -moz-column-gap: 2em;
+          column-gap: 2em;
+  /* Avoid column breaks within a list item element */
+  -webkit-column-break-inside: avoid;
+  page-break-inside: avoid;
+  break-inside: avoid-column;
+
   padding: 0;
   list-style-type: none;
   list-style: none;
+  overflow: hidden;
+  margin: 0;
 }
+#portfolio-list li {
+  margin-top: 2em;
+}
+#portfolio-list li:first-child {
+  margin-top:0;
+}
+
 #github-list {
+  -webkit-columns: 300px;
+     -moz-columns: 300px;
+          columns: 300px;
+  -webkit-column-gap: 2em;
+     -moz-column-gap: 2em;
+          column-gap: 2em;
+  /* Avoid column breaks within a list item element */
+  -webkit-column-break-inside: avoid;
+  page-break-inside: avoid;
+  break-inside: avoid-column;
+
   padding: 0;
   list-style-type: none;
   list-style: none;
+  overflow: hidden;
+  margin: 0;
+}
+#github-list li {
+  margin-top: 2em;
+}
+#github-list li:first-child {
+  margin-top:0;
 }
 
 .project-item {
@@ -507,15 +543,15 @@ a.pagination-item:hover {
   box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.37);
   transition: all 0.3s cubic-bezier(.25,.8,.25,1);*/
 
-  margin: 8px 8px 8px 0px;
+  /* margin: 8px 8px 8px 0px; */
   position: relative;
-  border-radius: 2px;
+  border-radius: 8px;
   overflow: hidden;
   background-color: #fafafa;
   height: 35%;
   min-height: 344px;
-  width: 344px;
-  transition: all 400ms cubic-bezier(0.165, 0.840, 0.440, 1.000);
+  /* width: 344px; */
+  /* transition: all 400ms cubic-bezier(0.165, 0.840, 0.440, 1.000); */
 }
 
 .project-item:hover {
@@ -604,6 +640,7 @@ a.pagination-item:hover {
   position: absolute;
   bottom: 0;
   top: auto;
+  max-width: 320px;
 }
 
 .project-item-play-store-badge a {
