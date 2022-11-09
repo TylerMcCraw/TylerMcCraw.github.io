@@ -8,7 +8,7 @@ title: About
 Tyler is an Android Developer currently living in Durham, NC.  
    He is a: <i class="material-icons md-18">&#xE52F;</i> mountain biker, <i class="material-icons md-18">&#xE405;</i> banjo picker, and a <i class="material-icons md-18">&#xE544;</i> coffee enthusiast.
 
-You can find him on [GitHub](https://github.com/TylerMcCraw), Twitter [@w3bshark](https://twitter.com/w3bshark), and [LinkedIn](https://www.linkedin.com/in/tylermccraw), or you can email him at mccraw.tyler [at] gmail.com.
+You can find him on [GitHub](https://github.com/TylerMcCraw), Twitter [@w3bshark](https://twitter.com/w3bshark), Mastodon <a rel="me" href="https://androiddev.social/@w3bshark">w3bshark</a>, and [LinkedIn](https://www.linkedin.com/in/tylermccraw), or you can email him at mccraw.tyler [at] gmail.com.
 
 ------
 
