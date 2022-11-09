@@ -15,7 +15,7 @@ permalink:        pretty
 # Setup
 title:            Tyler McCraw
 tagline:          'An Android blog'
-description:      'A blog on Android development.<br>Made by <a href="https://twitter.com/w3bshark" target="_blank">@w3bshark</a>.'
+description:      'A blog on Android development.<br>Made by <a href="https://twitter.com/w3bshark" target="_blank">@w3bshark</a>.<a hidden rel="me" href="https://androiddev.social/@w3bshark"> </a>'
 url:              http://w3bshark.com
 baseurl:          ""
 
